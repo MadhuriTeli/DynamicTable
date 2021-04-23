@@ -1,0 +1,78 @@
+<h1>Books List</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Genre</th>
+    <th>Published</th>
+  </tr>
+  <tr *ngFor=" let book of books;  let i = index">
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.genre}}</td>
+    <td>{{book.published}}</td>
+  </tr>
+  <tr>
+    <td>
+      <input class="form-control" type="text" id="newtitle" [(ngModel)]="newDynamic.title" name="newtitle" />
+    </td>
+    <td>
+      <input class="form-control" type="text" id="newauthor" [(ngModel)]="newDynamic.author" name="newauthor" />
+    </td>
+    <td>
+      <input class="form-control" type="text" id="newgenre" [(ngModel)]="newDynamic.genre" name="newgenre" />
+    </td>
+    <td>
+      <input class="form-control" type="text" id="newpublished" [(ngModel)]="newDynamic.published"
+        name="newpublished" />
+    </td>
+    <td>
+      <button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
+    </td>
+  </tr>
+</table>
+
+<!--
+<table mat-table [dataSource]="books" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> Title </th>
+    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="author">
+    <th mat-header-cell *matHeaderCellDef> Author </th>
+    <td mat-cell *matCellDef="let element"> {{element.author}} </td>
+  </ng-container>
+
+  
+  <ng-container matColumnDef="genre">
+    <th mat-header-cell *matHeaderCellDef> Genre </th>
+    <td mat-cell *matCellDef="let element"> {{element.genre}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="published">
+    <th mat-header-cel *matHeaderCellDef> Published </th>
+    <td mat-cell *matCellDef="let element"> {{element.published}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+</table>
+-->
+
+
+<!--
+  <tr>
+    <form [formGroup]="AddAssetForm">
+      <td><input type="text" formControl="title" /></td>
+      <td><input type="text" formControl="author"></td>
+      <td><input type="text" formControl="genre"></td>
+      <td><input type="text" formControl="published"></td>
+
+      <td> <button (click)="addRow(i )">Add</button> </td>
+    </form>
+  </tr>
+-->
